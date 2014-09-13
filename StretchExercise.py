@@ -8,7 +8,7 @@ width = float(input("Width of your garden: "))
 turf = int(10)
 border = int(2)
 
-if leng <= 2 or width <=2:
+if leng <= border or width <= border:
     print("Your garden isn't big enough to turf with a 1 meter border.")
 else:
     turf_leng = leng - border
