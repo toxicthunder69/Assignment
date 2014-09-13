@@ -14,6 +14,6 @@ else:
     turf_leng = leng - border
     turf_width = width - border
     area = turf_leng * turf_width
-    cost = area * turf
+    cost = format(area * turf, '.2f')
     
     print("It will cost you £{0} to turf your garden.".format(cost))
