@@ -2,18 +2,20 @@
 #11/09/14
 #Stretch Exercise
 
-print("Enter the measurements of you garden in meters")
-leng = float(input("Length of your garden: "))
-width = float(input("Width of your garden: "))
-turf = int(10)
-border = int(2)
-
-while leng <= border or width <= border:
-    print("Your garden isn't big enough for a 1 meter border.")
+while :
+    print("Enter the measurements of you garden in meters")
     leng = float(input("Length of your garden: "))
     width = float(input("Width of your garden: "))
-    if leng > border and width > border:
-        break
+    border_input = float(input("Enter the desired border size: "))
+    border = border_input * 2
+    turf = 10
+    
+    if leng <= border:
+        print("The length of your garden isn't long enough for a {0}m border.".format(border))
+        leng = float(input("Length of your garden: "))
+    if width <= border:
+        print("The width of your garden isn't long enough for a {0}m border.".format(border))
+        width = float(input("Width of your garden: "))
 
 turf_leng = leng - border
 turf_width = width - border
